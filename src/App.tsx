@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Router, Route, Switch } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
+import { useHashLocation } from "@/hooks/use-custom-hash-location";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import DisplayPage from "@/pages/DisplayPage";
