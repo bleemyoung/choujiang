@@ -24,6 +24,8 @@ export interface Prize {
 export interface Settings {
   title: string;
   password: string; // simple local password
+  showNeiding: boolean; // 是否显示内定字段
+  needPassword: boolean; // 是否需要密码
   welcomeTitle: string;
   welcomeSubtitle: string;
   prizePageTitle: string;  // 奖项页标题
