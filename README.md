@@ -6,6 +6,8 @@
 
 演示地址：https://choujiang.937788.xyz/
 
+> 国内访问：https://choujiang.670226461.workers.dev/（Cloudflare Workers 直连）
+
 ## 特性
 
 - **单文件部署**：构建后生成单个 HTML 文件，可直接用浏览器打开，无需服务器

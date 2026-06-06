@@ -45,9 +45,10 @@ export const useLotteryStore = create<LotteryState>()(
       participants: [],
       winners: [],
       prizes: [
-        { id: '1', name: '三等奖', count: 5 },
-        { id: '2', name: '二等奖', count: 3 },
-        { id: '3', name: '一等奖', count: 1 },
+        { id: '1', name: '惊喜礼品', count: 14 },
+        // { id: '1', name: '三等奖', count: 5 },
+        // { id: '2', name: '二等奖', count: 3 },
+        // { id: '3', name: '一等奖', count: 1 },
       ],
       currentPrizeId: '1',
       isRolling: false,
@@ -56,9 +57,11 @@ export const useLotteryStore = create<LotteryState>()(
       
       settings: {
         title: '抽奖系统',
+        showNeiding: false, // 是否显示内定字段
+        needPassword: false, // 是否需要密码
         password: 'yihen-yckj666',
         welcomeTitle: '',
-        welcomeSubtitle: '携手共进 · 再创辉煌',
+        welcomeSubtitle: '新婚快乐',
         prizePageTitle: '奖项',
         logo: '',
       },

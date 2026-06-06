@@ -5,17 +5,18 @@
 
 ## 项目简介
 
-欢迎使用抽奖系统（年会受控抽奖系统）——一款全屏黑金科技风格的抽奖/抽签工具。支持“受控抽奖”（必中名单、禁抽名单、权重概率），可离线运行，数据持久化于本地 localStorage。
+欢迎使用抽奖系统（年会受控抽奖系统）——一款全屏黑金科技风格的抽奖/抽签工具。支持"受控抽奖"（必中名单、禁抽名单、权重概率），可离线运行，数据持久化于本地 localStorage。
 
 ## 开发命令
 
 ```bash
-pnpm install          # 安装依赖
-pnpm dev              # 启动开发服务器 (http://localhost:5173)
-pnpm build            # TypeScript 编译 + Vite 打包（输出单一 HTML 文件）
-pnpm lint             # ESLint 代码校验
-pnpm preview          # 预览生产构建
-pnpm test             # 运行 Vitest 测试
+npm install          # 安装依赖
+npm run dev          # 启动开发服务器 (http://localhost:5173)
+npm run build        # TypeScript 编译 + Vite 打包（输出单一 HTML 文件）
+npm run lint         # ESLint 代码校验
+npm run preview      # 预览生产构建
+npm run test         # 运行 Vitest 测试
+npm run deploy:cf    # 部署到 Cloudflare Pages（需登录 wrangler）
 ```
 
 ## 架构说明
@@ -55,6 +56,18 @@ pnpm test             # 运行 Vitest 测试
 
 最终打包输出为 `/dist` 下单文件 HTML，所有 CSS/JS/图片均内联，便于离线 U 盘分发。
 
+## 部署
+
+自动部署（GitHub Actions）：
+- 推送到 `main` 分支自动触发 CI/CD
+- Secret 需要在 GitHub 仓库设置 `CLOUDFLARE_API_TOKEN`
+
+本地部署：
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name=choujiang
+```
+
 ## 测试
 
-使用 Vitest，命令：`pnpm test`
+使用 Vitest，命令：`npm run test`

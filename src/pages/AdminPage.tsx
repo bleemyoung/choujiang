@@ -95,7 +95,9 @@ export default function AdminPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleLogin = () => {
-    if (password === settings.password) {
+    console.log("handleLogin");
+    console.log("",settings.needPassword);
+    if (!settings.needPassword||password === settings.password) {
       setIsAuthenticated(true);
       sessionStorage.setItem('admin_authenticated', 'true');
       toast.success("已解锁控制台");
@@ -586,7 +588,7 @@ export default function AdminPage() {
                        <TableRow key={w.id}>
                          <TableCell className="font-bold">{w.name}</TableCell>
                          <TableCell className="text-xs text-muted-foreground">{w.dept}</TableCell>
-                         {controlledModeUnlocked && (
+                         {settings.showNeiding&&controlledModeUnlocked && (
                            <TableCell className="text-xs">
                               {w.mustWinPrizeId && (
                                   <Badge variant="secondary" className="scale-75">内定</Badge>
