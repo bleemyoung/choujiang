@@ -45,7 +45,10 @@ export const useLotteryStore = create<LotteryState>()(
       participants: [],
       winners: [],
       prizes: [
-        { id: '1', name: '惊喜礼品', count: 14 },
+        // { id: '1', name: '惊喜礼品', count: 14 },
+        { id: '1', name: '爱是恒久忍耐', count: 5 },
+        { id: '2', name: '爱是只喜欢真理', count: 5 },
+        { id: '3', name: '爱是永不止息', count: 6 },
         // { id: '1', name: '三等奖', count: 5 },
         // { id: '2', name: '二等奖', count: 3 },
         // { id: '3', name: '一等奖', count: 1 },
